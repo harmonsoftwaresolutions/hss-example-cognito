@@ -1,18 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 import './App.css';
 import SignUpForm from './SignUpForm';
+import LoginForm from './LoginForm';
+
+const Home = () => (
+  <p>Home</p>
+);
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <Router>
+        <div>
+          <div className="App">
+            <div className="App-header">
+              <h2>Harmon Software Solutions</h2>
+            </div>
+          </div>
+
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/signup">Sign Up</Link>
+            <Link to="/login">Log in</Link>
+          </nav>
+
+          <hr />
+
+          <Route exact path="/" component={Home} />
+          <Route path="/signup" component={SignUpForm} />
+          <Route path="/login" component={LoginForm} />
         </div>
-        <SignUpForm />
-      </div>
+      </Router>
     );
   }
 }

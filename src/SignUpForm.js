@@ -1,4 +1,4 @@
-import {Config, CognitoIdentityCredentials} from 'aws-sdk';
+import { Config, CognitoIdentityCredentials } from 'aws-sdk';
 import {
   CognitoUserPool,
   CognitoUserAttribute
@@ -57,13 +57,13 @@ class SignUpForm extends Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <input type="text"
-                value={this.state.email}
-                placeholder="Email"
-                onChange={this.handleEmailChange.bind(this)} />
+               value={this.state.email}
+               placeholder="Email"
+               onChange={this.handleEmailChange.bind(this)} />
         <input type="password"
-                value={this.state.password}
-                placeholder="Password"
-                onChange={this.handlePasswordChange.bind(this)} />
+               value={this.state.password}
+               placeholder="Password"
+               onChange={this.handlePasswordChange.bind(this)} />
         <input type="submit" />
       </form>
     );
@@ -71,3 +71,4 @@ class SignUpForm extends Component {
 }
 
 export default SignUpForm;
+
