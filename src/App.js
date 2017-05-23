@@ -7,6 +7,7 @@ import {
 import './App.css';
 import SignUpForm from './SignUpForm';
 import LoginForm from './LoginForm';
+import ConfirmationForm from './ConfirmationForm';
 
 const Home = () => (
   <p>Home</p>
@@ -27,6 +28,7 @@ class App extends Component {
             <Link to="/">Home</Link>
             <Link to="/signup">Sign Up</Link>
             <Link to="/login">Log in</Link>
+            <Link to="/confirmation">Confirmation</Link>
           </nav>
 
           <hr />
@@ -34,6 +36,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/signup" component={SignUpForm} />
           <Route path="/login" component={LoginForm} />
+          <Route path="/confirmation" component={ConfirmationForm} />
         </div>
       </Router>
     );

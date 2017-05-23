@@ -21,7 +21,8 @@ class SignUpForm extends Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      message: ''
     };
   }
 
@@ -46,26 +47,31 @@ class SignUpForm extends Component {
     userPool.signUp(email, password, attributeList, null, (err, result) => {
       if (err) {
         console.log(err);
+        this.setState({ message: err.message });
         return;
       }
+      this.setState({ message: "User created" });
       console.log('user name is: ' + result.user.getUsername());
-      console.log('call result: ' + result);
+      console.log('call result: ' + JSON.stringify(result));
     })
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <input type="text"
-               value={this.state.email}
-               placeholder="Email"
-               onChange={this.handleEmailChange.bind(this)} />
-        <input type="password"
-               value={this.state.password}
-               placeholder="Password"
-               onChange={this.handlePasswordChange.bind(this)} />
-        <input type="submit" />
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <input type="text"
+                 value={this.state.email}
+                 placeholder="Email"
+                 onChange={this.handleEmailChange.bind(this)} />
+          <input type="password"
+                 value={this.state.password}
+                 placeholder="Password"
+                 onChange={this.handlePasswordChange.bind(this)} />
+          <input type="submit" />
+        </form>
+        <h3>{this.state.message}</h3>
+      </div>
     );
   }
 }
