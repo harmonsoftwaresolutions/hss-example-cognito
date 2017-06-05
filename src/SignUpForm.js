@@ -4,6 +4,7 @@ import {
   CognitoUserAttribute
 } from 'amazon-cognito-identity-js';
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import appConfig from './config';
 
 Config.region = appConfig.region;
@@ -22,7 +23,8 @@ class SignUpForm extends Component {
     this.state = {
       email: '',
       password: '',
-      message: ''
+      message: '',
+      redirectToConfirmation: false
     };
   }
 
@@ -50,13 +52,23 @@ class SignUpForm extends Component {
         this.setState({ message: err.message });
         return;
       }
-      this.setState({ message: "User created" });
       console.log('user name is: ' + result.user.getUsername());
       console.log('call result: ' + JSON.stringify(result));
+      this.setState({ message: "User created" });
+      this.setState({ redirectToConfirmation: true });
     })
   }
 
   render() {
+    const { redirectToConfirmation } = this.state;
+
+    // on successful submit go to confirmation page
+    if (redirectToConfirmation) {
+      return (
+        <Redirect to="/confirmation" />
+      )
+    }
+
     return (
       <div>
         <form onSubmit={this.handleSubmit.bind(this)}>
