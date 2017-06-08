@@ -69,17 +69,23 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
-        <input type="text"
+      <section id="loginBox">
+        <form onSubmit={this.handleSubmit.bind(this)}>
+          <label>
+            <input type="text"
                value={this.state.email}
                placeholder="Email"
                onChange={this.handleEmailChange.bind(this)} />
-        <input type="password"
+          </label>
+          <label>
+            <input type="password"
                value={this.state.password}
                placeholder="Password"
                onChange={this.handlePasswordChange.bind(this)} />
-        <input type="submit" value="Log In"/>
-      </form>
+            <input type="submit" value="Log In"/>
+          </label>
+        </form>
+      </section>
     );
   }
 }
