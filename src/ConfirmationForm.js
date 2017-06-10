@@ -54,19 +54,25 @@ class ConfirmationForm extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <input
-            type="text"
-            value={this.state.email}
-            placeholder="Enter Email"
-            onChange={this.handleEmailChange.bind(this)} />
-          <input
-            type="password"
-            value={this.state.confirmationCode}
-            placeholder="Enter Confirmation Code"
-            onChange={this.handleConfirmationCodeChange.bind(this)} />
-          <input type="submit" />
-        </form>
+        <section id="confirmationBox">
+          <form onSubmit={this.handleSubmit.bind(this)}>
+            <label>
+              <input type="text"
+                value={this.state.email}
+                placeholder="Enter Email"
+                onChange={this.handleEmailChange.bind(this)} />
+            </label>
+            <label>
+              <input type="password"
+                value={this.state.confirmationCode}
+                placeholder="Enter Confirmation Code"
+                onChange={this.handleConfirmationCodeChange.bind(this)} />
+            </label>
+            <label>
+              <input type="submit" />
+            </label>
+          </form>
+        </section>
         <h3>{this.state.message}</h3>
       </div>
     );
