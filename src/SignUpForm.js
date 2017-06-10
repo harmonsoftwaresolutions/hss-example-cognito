@@ -71,18 +71,26 @@ class SignUpForm extends Component {
 
     return (
       <div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text"
-                 value={this.state.email}
-                 placeholder="Email"
-                 onChange={this.handleEmailChange.bind(this)} />
-          <input type="password"
-                 value={this.state.password}
-                 placeholder="Password"
-                 onChange={this.handlePasswordChange.bind(this)} />
-          <input type="submit" />
-        </form>
-        <h3>{this.state.message}</h3>
+        <section id="signUpBox">
+          <form onSubmit={this.handleSubmit.bind(this)}>
+            <label>
+                <input type="text"
+                    value={this.state.email}
+                    placeholder="Email"
+                    onChange={this.handleEmailChange.bind(this)} />
+            </label>
+            <label>
+                <input type="password"
+                    value={this.state.password}
+                    placeholder="Password"
+                    onChange={this.handlePasswordChange.bind(this)} />
+            </label>
+            <label>
+              <input type="submit" />
+            </label>
+          </form>
+        </section>
+          <h3>{this.state.message}</h3>
       </div>
     );
   }
