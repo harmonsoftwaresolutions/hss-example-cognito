@@ -59,13 +59,13 @@ class ConfirmationForm extends Component {
             <label>
               <input type="text"
                 value={this.state.email}
-                placeholder="Enter Email"
+                placeholder="Email"
                 onChange={this.handleEmailChange.bind(this)} />
             </label>
             <label>
               <input type="password"
                 value={this.state.confirmationCode}
-                placeholder="Enter Confirmation Code"
+                placeholder="Confirmation Code"
                 onChange={this.handleConfirmationCodeChange.bind(this)} />
             </label>
             <label>

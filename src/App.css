@@ -28,6 +28,8 @@ a {
 }
 
 input {
+  width: 400px;
+  padding: 0 13px;
   font-size: 13px;
 }
 
@@ -41,6 +43,9 @@ h2 {
   color: rgb(34,34,34);
   font-weight: 200;
   margin: 0 0 24px 0;
+display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section#loginBox {
