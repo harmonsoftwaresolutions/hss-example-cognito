@@ -43,7 +43,7 @@ h2 {
   color: rgb(34,34,34);
   font-weight: 200;
   margin: 0 0 24px 0;
-display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -86,4 +86,16 @@ section#confirmationBox {
 .overflow {
   white-space: nowrap;
   overflow: show;
+}
+
+form {
+  text-align:center;
+  vertical-align:middle;
+  -webkit-box-align: center;
+}
+
+form input.type=submit {
+  text-align:center;
+  vertical-align:middle;
+  -webkit-box-align: center;
 }
