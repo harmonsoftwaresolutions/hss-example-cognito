@@ -28,7 +28,13 @@ a {
 }
 
 input {
-  font-size: 30px;
+  font-size: 13px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 13px!important;
+    line-height: 3;
 }
 
 h2 {
@@ -70,4 +76,9 @@ section#confirmationBox {
   margin: 40px auto; /*aligns center*/
   padding: 40px;
   width: 500px;
+}
+
+.overflow {
+  white-space: nowrap;
+  overflow: show;
 }
