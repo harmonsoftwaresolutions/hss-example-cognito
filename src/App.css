@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+a {
+  margin: 5px;
+}
+
+input {
+  width: 400px;
+  padding: 0 13px;
+  font-size: 13px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 13px!important;
+    line-height: 3;
+}
+
+h2 {
+  color: rgb(34,34,34);
+  font-weight: 200;
+  margin: 0 0 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#loginBox {
+  background-color: rgb(255,255,255);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 0 4px rgba(0,0,0,0.2);
+  margin: 40px auto; /*aligns center*/
+  padding: 40px;
+  width: 500px;
+}
+
+form.minimal label {
+  display: block;
+  margin: 6px 0;
+}
+
+section#signUpBox {
+  background-color: rgb(255,255,255);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 0 4px rgba(0,0,0,0.2);
+  margin: 40px auto; /*aligns center*/
+  padding: 40px;
+  width: 500px;
+}
+
+section#confirmationBox {
+  background-color: rgb(255,255,255);
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2) inset, 0 0 4px rgba(0,0,0,0.2);
+  margin: 40px auto; /*aligns center*/
+  padding: 40px;
+  width: 500px;
+}
+
+.overflow {
+  white-space: nowrap;
+  overflow: show;
+}
+
+form {
+  text-align:center;
+  vertical-align:middle;
+  -webkit-box-align: center;
+}
+
+form input.type=submit {
+  text-align:center;
+  vertical-align:middle;
+  -webkit-box-align: center;
+}
